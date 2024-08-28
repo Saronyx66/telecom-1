@@ -43,3 +43,76 @@ public class ExamenProblema2 {
 	      br.close();
   }
 }
+
+
+//creacion de codigo numero mayor de 3  Mariana Mora
+import java.util.Scanner;
+/**
+ * Write a description of class MayorDe3Numeros here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class MayorDe3Numeros
+{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //ingresamos los datos 
+        System.out.print("Ingrese el primer número: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Ingrese el segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Ingrese el tercer número: ");
+        double num3 = scanner.nextDouble();
+
+        // aqui se determina  el número mayor con if anidados
+        double mayorAnidados;
+
+        if (num1 >= num2) {
+            if (num1 >= num3) {
+                mayorAnidados = num1;
+            } else {
+                mayorAnidados = num3;
+            }
+        } else {
+            if (num2 >= num3) {
+                mayorAnidados = num2;
+            } else {
+                mayorAnidados = num3;
+            }
+        }
+
+        System.out.println("El número mayor (if anidados) es: " + mayorAnidados);
+
+        // aqui se determina  el número mayor con if-else
+        double mayorIfElse;
+
+        if (num1 >= num2 && num1 >= num3) {
+            mayorIfElse = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            mayorIfElse = num2;
+        } else {
+            mayorIfElse = num3;
+        }
+
+        System.out.println("El número mayor (if-else) es: " + mayorIfElse);
+
+        // aqui se determina el número mayor con if individuales
+        double mayorIndividuales = num1;
+
+        if (num2 > mayorIndividuales) {
+            mayorIndividuales = num2;
+        }
+
+        if (num3 > mayorIndividuales) {
+            mayorIndividuales = num3;
+        }
+
+        System.out.println("El número mayor (if individuales) es: " + mayorIndividuales);
+
+        scanner.close();
+    }
+  
+}
