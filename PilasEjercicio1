@@ -44,6 +44,8 @@ public class ExamenProblema2 {
   }
 }
 
+//Es un comentario Rubi
+
 
 //creacion de codigo numero mayor de 3  Mariana Mora
 import java.util.Scanner;
