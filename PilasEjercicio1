@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-
+//este es un comentario #1
 public class ExamenProblema2 {
 	public static void main(String[] args) throws IOException, FileNotFoundException {
 		  File file = new File("C:\\Users\\GalaxyOnyx\\eclipse-workspace\\Unidad 4\\src\\pilas\\ExamenEntradaProblema2.txt");
