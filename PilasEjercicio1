@@ -1,0 +1,45 @@
+package pilas;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+
+public class ExamenProblema2 {
+	public static void main(String[] args) throws IOException, FileNotFoundException {
+		  File file = new File("C:\\Users\\GalaxyOnyx\\eclipse-workspace\\Unidad 4\\src\\pilas\\ExamenEntradaProblema2.txt");
+	      FileReader flujoEntrada = new FileReader(file);
+	      BufferedReader br = new BufferedReader(flujoEntrada);
+	      
+	      //Crear una pila y una cola, la cola será la cola 1 y la pila será la cola2
+	      Queue<String> cola1 = new LinkedList<>();
+	      Stack<String> cola2 = new Stack<>();
+	      
+	      int numOperaciones = Integer.parseInt(br.readLine());
+	      
+	      for(int cont=0; cont<numOperaciones; cont++) {
+	    	  String[] linea = br.readLine().split(" ");
+	    	  
+	    	  String operacion = linea[0];
+	    	  int numCola = Integer.parseInt(linea[1]);
+	    	  
+	    	  
+	    	  if(operacion.equals("E") && numCola == 1) {
+	    		  String nombre = linea[2];
+	    		  cola1.add(nombre);
+	    	  }else if (operacion.equals("E") && numCola == 2) {
+	    		  String nombre = linea[2];
+	    		  cola2.push(nombre);
+	    	  	}else if (operacion.equals("A") && numCola == 1) {
+	    	  		System.out.println(cola1.poll()+ "\t");
+	    	  	  }else if (operacion.equals("A") && numCola == 2) {
+	    	  		  System.out.println(cola2.pop()+ "\t");
+	    	  	  }
+	      }
+	      br.close();
+  }
+}
